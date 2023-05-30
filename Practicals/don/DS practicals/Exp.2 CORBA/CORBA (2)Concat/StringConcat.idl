@@ -1,0 +1,5 @@
+module StringConcat {
+    interface Concatenator {
+        string concatenate(in string s1, in string s2);
+    };
+};

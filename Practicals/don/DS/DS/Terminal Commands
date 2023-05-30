@@ -1,0 +1,25 @@
+			1.RMI
+javac *.java
+ls
+rmic AdditionImpl
+rmiregistry 1100&
+
+java AdditionServer
+
+java AdditionClient
+
+
+
+			2.Corba
+idlj -fall  calculator.idl
+javac *.java CalApp/*.java
+orbd -ORBInitialPort 1050&
+
+java CalculatorServer -ORBInitialPort 1050 -ORBInitialHost localhost&
+
+java CalculatorClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+			3.MPI
+mpicc Sum.c -o sum
+mpirun -np 4 ./sum
+

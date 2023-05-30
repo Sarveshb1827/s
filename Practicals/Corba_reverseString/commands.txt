@@ -1,0 +1,8 @@
+1st terminal:
+	1.idlj --fall StringReverse;
+	2.javac *.java StringRevese/*.java
+	3.orbd -ORBInitialPort 1050&
+	4.java StringReverseServer -ORBInitialPort 1050 -ORBInitialHost localhost&
+
+2nd Terminal:
+	1.java StringReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost
